@@ -1,10 +1,9 @@
 'use client'
 
 import { IconMenu2 } from '@tabler/icons-react'
+import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from '../ui/button'
-import { AvailableForHireBadge } from './AvailableForHireBadge'
-import { Logo } from './Logo'
 import { MobileMenu } from './MobileMenu'
 import { NavLink } from './NavLink'
 import { ThemeSwitcher } from './ThemeSwitcher'
@@ -14,12 +13,17 @@ export const Header = () => {
 
     return (
         <>
-            <header className="fixed top-5 left-0 right-0 z-20">
+            <header className="fixed top-4 left-0 right-0 z-20">
                 <div className="relative container">
                     <div className="px-6 sm:px-8 py-3 flex items-center justify-between rounded-full backdrop-blur-sm border bg-background/60">
                         {/* left side */}
                         <div>
-                            <Logo />
+                            <Link href="/" className="sm:hidden">
+                                Rasul{' '}
+                                <span className="text-muted-foreground">
+                                    Ismayil
+                                </span>
+                            </Link>
 
                             <nav className="hidden sm:flex items-center space-x-5">
                                 <NavLink href="/">Home</NavLink>
@@ -31,8 +35,6 @@ export const Header = () => {
 
                         {/* right side */}
                         <div className="flex items-center space-x-3">
-                            <AvailableForHireBadge className="hidden sm:flex" />
-
                             <ThemeSwitcher />
 
                             <Button
@@ -51,7 +53,7 @@ export const Header = () => {
             {/* page layer */}
             <div
                 onClick={() => setMobileMenuOpen(false)}
-                className="lg:hidden z-[21] absolute inset-0 w-full h-full bg-foreground/20 dark:bg-background/50 transition-all"
+                className="md:hidden z-[21] fixed inset-0 w-full h-full bg-foreground/20 dark:bg-background/50 transition-all"
                 style={{
                     opacity: isMobileMenuOpen ? 1 : 0,
                     pointerEvents: isMobileMenuOpen ? 'all' : 'none',

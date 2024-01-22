@@ -8,10 +8,6 @@ export const ThemeSwitcher = () => {
     const { isMounted } = useIsMounted()
     const { theme, setTheme } = useTheme()
 
-    // if (!isMounted) {
-    //     return <></>
-    // }
-
     return (
         <Button
             size="icon"
