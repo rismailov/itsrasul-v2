@@ -1,6 +1,9 @@
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header/Header'
 import { fontSans } from '@/components/font'
+import { AppProvider } from '@/components/providers/app-provider'
 import { ThemeProvider } from '@/components/providers/theme-provider'
+import { Toaster } from '@/components/ui/sonner'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import './globals.css'
@@ -29,28 +32,17 @@ export default function RootLayout({
                     defaultTheme="system"
                     disableTransitionOnChange
                 >
-                    <Header />
+                    <Toaster />
 
-                    {/* aurora gradient  */}
-                    <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-                        <div className="relative w-full h-full">
-                            <div
-                                className="absolute top-0 left-0 right-0 -mt-28 flex -rotate-45 justify-center"
-                                style={{
-                                    filter: 'blur(30px) saturate(7) hue-rotate(0deg)',
-                                    opacity: 0.5,
-                                }}
-                            >
-                                <div className="h-48 w-8 bg-indigo-500"></div>
-                                <div className="h-80 w-10 bg-blue-500"></div>
-                                <div className="h-80 w-10 bg-emerald-500"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <AppProvider>
+                        <Header />
 
-                    <main className="z-10 flex min-h-screen pt-32 sm:pt-36">
-                        <div className="container">{children}</div>
-                    </main>
+                        <main className="relative z-10 flex min-h-screen pt-32">
+                            <div className="container">{children}</div>
+                        </main>
+                    </AppProvider>
+
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>

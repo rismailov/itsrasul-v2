@@ -1,21 +1,31 @@
 'use client'
 
+import { cn, scrollToSection } from '@/lib/utils'
 import { IconMenu2 } from '@tabler/icons-react'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useAppContext } from '../providers/app-provider'
 import { Button } from '../ui/button'
 import { MobileMenu } from './MobileMenu'
-import { NavLink } from './NavLink'
 import { ThemeSwitcher } from './ThemeSwitcher'
+
+const SECTIONS = [
+    { id: 'hero', label: 'Home' },
+    { id: 'work', label: 'Work' },
+    { id: 'about', label: 'About' },
+    { id: 'contact', label: 'Contact' },
+] as const
 
 export const Header = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+    const { activeSection } = useAppContext()
+
     return (
         <>
-            <header className="fixed top-4 left-0 right-0 z-20">
-                <div className="relative container">
-                    <div className="px-6 sm:px-8 py-3 flex items-center justify-between rounded-full backdrop-blur-sm border bg-background/60">
+            <header className="fixed h-[70px] top-0 left-0 right-0 z-20 bg-background/80 backdrop-blur-sm border-b">
+                <div className="container">
+                    <div className="h-full flex items-center justify-between">
                         {/* left side */}
                         <div>
                             <Link href="/" className="sm:hidden">
@@ -26,10 +36,21 @@ export const Header = () => {
                             </Link>
 
                             <nav className="hidden sm:flex items-center space-x-5">
-                                <NavLink href="/">Home</NavLink>
-                                <NavLink href="/work">Work</NavLink>
-                                <NavLink href="/blog">Blog</NavLink>
-                                <NavLink href="/contact">Contact</NavLink>
+                                {SECTIONS.map(({ id, label }) => (
+                                    <Button
+                                        key={id}
+                                        variant="link"
+                                        onClick={() => scrollToSection(id)}
+                                        className={cn(
+                                            'text-base hover:no-underline',
+                                            activeSection === id
+                                                ? 'text-foreground'
+                                                : 'text-muted-foreground',
+                                        )}
+                                    >
+                                        {label}
+                                    </Button>
+                                ))}
                             </nav>
                         </div>
 

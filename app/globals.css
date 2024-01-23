@@ -41,7 +41,7 @@
         --muted-foreground: 240 5% 64.9%;
         --accent: 240 3.7% 15.9%;
         --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
+        --destructive: 0 90.6% 70.8%;
         --destructive-foreground: 0 0% 98%;
         --border: 240 3.7% 15.9%;
         --input: 240 3.7% 15.9%;
@@ -52,6 +52,10 @@
 @layer base {
     * {
         @apply border-border;
+    }
+
+    html {
+        @apply text-[17px];
     }
 
     body {
@@ -74,6 +78,6 @@
 
 @layer components {
     .container {
-        @apply h-full px-4 sm:px-8;
+        @apply h-full;
     }
 }

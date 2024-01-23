@@ -9,25 +9,19 @@ export const Project = ({
     description,
     siteUrl,
     githubUrl,
-    year,
     stack,
 }: {
     title: string
     description: string
     siteUrl?: string
     githubUrl?: string
-    year: number
     stack: string[]
 }) => {
     return (
-        <div className="border rounded-xl dark:bg-secondary h-fit">
+        <div className="border rounded-xl h-fit">
             {/* card header */}
-            <div className="p-6 pt-5 pb-0 flex items-center">
-                <h3 className="font-medium">{title}</h3>
-
-                <h3 className="text-muted-foreground/50 font-normal">
-                    , {year}
-                </h3>
+            <div className="p-6 pt-5 pb-0">
+                <p className="text-xl font-medium">{title}</p>
             </div>
 
             {/* card body */}
@@ -36,24 +30,18 @@ export const Project = ({
             </div>
 
             {/* card footer */}
-            <div className="px-6 py-5">
+            <div className="px-6 pt-5 pb-6">
                 {/* tech stack */}
                 <div className="flex flex-wrap gap-1.5 mb-6">
                     {stack.map((el, k) => (
-                        <Badge
-                            key={k}
-                            variant="secondary"
-                            className="dark:bg-accent"
-                        >
-                            {el}
-                        </Badge>
+                        <Badge key={k}>{el}</Badge>
                     ))}
                 </div>
 
                 {/* links */}
                 <div className="flex items-center space-x-3">
                     {siteUrl && (
-                        <Button size="sm" asChild aria-label="Visit project">
+                        <Button size="sm" asChild>
                             <Link href={siteUrl} target="_blank">
                                 <span>Live Demo</span>
 
@@ -63,12 +51,7 @@ export const Project = ({
                     )}
 
                     {githubUrl && (
-                        <Button
-                            variant="secondary"
-                            size="sm"
-                            asChild
-                            aria-label="View source code"
-                        >
+                        <Button variant="secondary" size="sm" asChild>
                             <Link href={githubUrl} target="_blank">
                                 <span>View Source</span>
 

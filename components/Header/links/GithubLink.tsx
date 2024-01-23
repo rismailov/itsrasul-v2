@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const GithubLink = (props: ButtonProps) => {
     return (
-        <Button variant="secondary" size="lg" asChild {...props}>
+        <Button asChild {...props}>
             <Link
                 href="https://github.com/rismailov"
                 target="_blank"
@@ -12,7 +12,7 @@ export const GithubLink = (props: ButtonProps) => {
             >
                 <span>Github</span>
 
-                <GithubSprite className="w-[18px] h-[18px] fill-foreground ml-3" />
+                <GithubSprite className="w-[18px] h-[18px] fill-background ml-3" />
             </Link>
         </Button>
     )

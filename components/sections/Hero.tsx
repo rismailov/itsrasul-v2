@@ -2,14 +2,21 @@ import me from '@/public/me.webp'
 import Image from 'next/image'
 import { GithubLink } from '../Header/links/GithubLink'
 import { UpworkLink } from '../Header/links/UpworkLink'
+import { Section } from '../Section'
 
 export const Hero = () => {
     return (
-        <section className="flex flex-col sm:flex-row justify-between px-2 sm:px-8 space-y-14 sm:space-y-0 sm:space-x-4">
+        <Section
+            id="hero"
+            className="flex flex-col sm:flex-row justify-between space-y-14 sm:space-y-0 sm:space-x-4 mb-24"
+        >
             <div className="flex flex-col items-center sm:items-start">
-                <h1 className="max-w-xl text-center sm:text-left">
-                    Hi <span className="inline-block mr-2.5">👋</span>I&apos;m
-                    Rasul, a Full Stack developer based in Baku.
+                <p className="text-2xl font-medium text-muted-foreground">
+                    hi, I&apos;m Rasul
+                </p>
+
+                <h1 className="mt-1 max-w-xl text-center sm:text-left">
+                    a full stack developer based in Baku
                 </h1>
 
                 <p className="mt-3 max-w-2xl text-muted-foreground text-lg text-center sm:text-left">
@@ -38,6 +45,6 @@ export const Hero = () => {
                     />
                 </div>
             </div>
-        </section>
+        </Section>
     )
 }
