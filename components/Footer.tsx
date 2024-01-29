@@ -2,7 +2,7 @@ import { Button } from './ui/button'
 
 export const Footer = () => {
     return (
-        <footer className="border-t h-[60px]">
+        <footer className="border-t h-[90px]">
             <div className="container">
                 <div className="h-full flex items-center justify-center sm:justify-start pb-1">
                     <p className="text-muted-foreground">
