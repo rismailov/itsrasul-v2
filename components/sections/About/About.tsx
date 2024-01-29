@@ -54,7 +54,7 @@ export const About = () => {
                         </p>
 
                         <div className="mt-4 flex flex-wrap gap-1">
-                            <Badge>PHP</Badge>
+                            <Badge>FastAPI</Badge>
                             <Badge>Laravel</Badge>
                             <Badge>Typescript</Badge>
                             <Badge>React</Badge>

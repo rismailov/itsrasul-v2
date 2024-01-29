@@ -8,6 +8,8 @@ const STACK = {
     POSTGRES: 'Postgres',
     TYPESCRIPT: 'Typescript',
     TAILWIND: 'Tailwind',
+    PYTHON: 'Python',
+    FASTAPI: 'FastAPI',
 } as const
 
 export const Projects = () => {
@@ -19,7 +21,7 @@ export const Projects = () => {
                 {/* using 2 flexboxes to achieve masonry effect */}
                 <div className="flex flex-col gap-5 md:w-1/2">
                     <Project
-                        title="portfolio"
+                        title="portfolio v2"
                         description="The website you're currently visiting. Personal website, where I occasionally share my thoughts."
                         siteUrl="https://itsrasul.dev"
                         githubUrl="https://github.com/rismailov/itsrasul-v2"
@@ -41,6 +43,20 @@ export const Projects = () => {
                             STACK.REACT,
                             STACK.TAILWIND,
                             STACK.POSTGRES,
+                        ]}
+                    />
+
+                    <Project
+                        title="image background remover"
+                        description="A simple image background remover tool using python rembg library."
+                        siteUrl="https://bg-remover.itsrasul.dev"
+                        githubUrl="https://github.com/rismailov/image-bg-remover"
+                        stack={[
+                            STACK.PYTHON,
+                            STACK.FASTAPI,
+                            STACK.TYPESCRIPT,
+                            STACK.REACT,
+                            STACK.TAILWIND,
                         ]}
                     />
                 </div>
@@ -66,6 +82,19 @@ export const Projects = () => {
                         siteUrl="https://digit-ux.vercel.app/"
                         githubUrl="https://github.com/rismailov/demo-project-01"
                         stack={[STACK.REACT, STACK.TAILWIND]}
+                    />
+
+                    <Project
+                        title="portfolio v1"
+                        description="V1 of my portfolio website."
+                        siteUrl="https://v1.itsrasul.dev/"
+                        githubUrl="https://github.com/rismailov/itsrasul-v1"
+                        stack={[
+                            STACK.NEXTJS,
+                            STACK.TYPESCRIPT,
+                            STACK.REACT,
+                            STACK.TAILWIND,
+                        ]}
                     />
                 </div>
             </div>
