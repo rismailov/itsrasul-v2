@@ -79,7 +79,7 @@ export const Projects = () => {
                     <Project
                         title="digitUX"
                         description="Simple agency landing page with dark mode support built from design in Figma."
-                        siteUrl="https://digit-ux.vercel.app/"
+                        siteUrl="https://digit-ux.itsrasul.dev/"
                         githubUrl="https://github.com/rismailov/demo-project-01"
                         stack={[STACK.REACT, STACK.TAILWIND]}
                     />
