@@ -63,10 +63,10 @@ export const Projects = () => {
 
                 <div className="flex flex-col gap-5 md:w-1/2">
                     <Project
-                        title="shoescommerce"
+                        title="nikecommerce"
                         description="Demo e-commerce project built with Laravel and React, using Nike shoes as a product. Has basic features such as authentication, filtering, sorting and admin panel."
-                        siteUrl="https://shoescommerce.itsrasul.dev/"
-                        githubUrl="https://github.com/rismailov/shoescommerce"
+                        siteUrl="https://shop.itsrasul.dev/"
+                        githubUrl="https://github.com/rismailov/ecommerce"
                         stack={[
                             STACK.LARAVEL,
                             STACK.TYPESCRIPT,
