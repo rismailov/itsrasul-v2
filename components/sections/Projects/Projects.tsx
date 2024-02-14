@@ -36,6 +36,7 @@ export const Projects = () => {
                     <Project
                         title="wave"
                         description="A little opiniated Inertia, React & Typescript starter template with authentication and user dashboard, to kickstart your next Laravel project."
+                        siteUrl="https://wave.itsrasul.dev"
                         githubUrl="https://github.com/rismailov/inertia-typescript-react"
                         stack={[
                             STACK.LARAVEL,
