@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/sonner'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import './globals.css'
+import { AuroraGradient } from '@/components/AuroraGradient'
 
 export const metadata: Metadata = {
     title: 'Rasul Ismayil - Full Stack Web Developer',
@@ -35,6 +36,8 @@ export default function RootLayout({
                     <Toaster />
 
                     <AppProvider>
+                        <AuroraGradient />
+
                         <Header />
 
                         <main className="relative z-10 flex min-h-screen pt-32">

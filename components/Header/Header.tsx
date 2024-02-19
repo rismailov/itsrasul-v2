@@ -23,7 +23,7 @@ export const Header = () => {
 
     return (
         <>
-            <header className="fixed h-[70px] top-0 left-0 right-0 z-20 bg-background/80 backdrop-blur-sm border-b">
+            <header className="fixed h-[70px] top-0 left-0 right-0 z-20 bg-background/50 backdrop-blur-sm border-b">
                 <div className="container">
                     <div className="h-full flex items-center justify-between">
                         {/* left side */}
