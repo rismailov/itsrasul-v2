@@ -24,23 +24,9 @@ export const About = () => {
                             >
                                 Upwork
                             </a>
-                        </Button>{' '}
-                        and{' '}
-                        <Button
-                            variant="link"
-                            className="text-base underline hover:no-underline font-normal"
-                            asChild
-                        >
-                            <a
-                                href="https://www.fiverr.com/itsrasul?up_rollout=true"
-                                target="_blank"
-                            >
-                                Fiverr
-                            </a>
                         </Button>
-                        . Whether you want a new website built from scratch or
-                        improve an existing one, feel free to reach out to me on
-                        these platforms.
+                        , helping small to medium-sized businesses to achieve
+                        their goals.
                     </p>
                 </AboutSection>
 
@@ -71,7 +57,9 @@ export const About = () => {
                         I focus on building professional, responsive and
                         SEO-optimized websites. These include, but not limited
                         to landing pages, e-commerce shops, portfolios or
-                        personal sites and CRM/CMS systems.
+                        personal sites and CRM/CMS systems. Whether you want a
+                        new website built from scratch or improve an existing
+                        one, feel free to reach out to me on these platforms.
                     </p>
                 </AboutSection>
             </div>

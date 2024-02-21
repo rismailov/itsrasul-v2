@@ -1,3 +1,4 @@
+import { AuroraGradient } from '@/components/AuroraGradient'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header/Header'
 import { fontSans } from '@/components/font'
@@ -7,7 +8,6 @@ import { Toaster } from '@/components/ui/sonner'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import './globals.css'
-import { AuroraGradient } from '@/components/AuroraGradient'
 
 export const metadata: Metadata = {
     title: 'Rasul Ismayil - Full Stack Web Developer',
